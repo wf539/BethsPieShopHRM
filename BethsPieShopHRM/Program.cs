@@ -111,3 +111,8 @@ george.PerformWork();
 george.PerformWork(8);
 
 var receivedWageGeorge = george.ReceiveWage(true);
+
+WorkTask task;
+task.description = "Bake delicious pies";
+task.hours = 3;
+task.PerformWorkTask();
