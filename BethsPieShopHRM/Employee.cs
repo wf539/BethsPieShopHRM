@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -87,6 +88,17 @@ namespace BethsPieShopHRM
 
 			Console.WriteLine($"The employee got a bonus of {bonus} and the tax on the bonus is {bonusTax}");
 			return bonus;
+		}
+
+		public static void UsingACustomType()
+		{
+			List<string> list = new List<string>();
+		}
+
+		public string ConvertToJson()
+		{
+			string json = JsonConvert.SerializeObject(this);
+			return json;
 		}
 
 		public double ReceiveWage(bool resetHours = true)
